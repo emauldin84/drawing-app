@@ -22,9 +22,9 @@ const Canvas = (props) => {
             ])
         }
     }
+    
     return(
         <div className="canvas-container" onMouseMove={handleChange}>
-            Canvas
             {art}
         </div>
     )

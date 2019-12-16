@@ -14,9 +14,8 @@ const App = () => {
     setColorState(e.target.value)
   }
 
-  const handleSizeSelect = (e) => {
-    console.log(e)
-
+  const handleSizeSelect = (size) => {
+    setSizeState(size)
   }
 
   return (

@@ -7,7 +7,7 @@ const Settings = (props) => {
     return(
         <div className="settings-container">
             <Colors handleColorSelect={props.handleColorSelect} colorState={props.colorState}/>
-            <Sizes handleSizeSelect={props.handleSizeSelect}/>
+            <Sizes handleSizeSelect={props.handleSizeSelect} sizeState={props.sizeState}/>
         </div>
     )
 }
