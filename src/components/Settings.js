@@ -1,12 +1,13 @@
 import React from 'react'
 import Colors from './Colors'
-import Size from './Size'
+import Sizes from './Sizes'
 
-const Settings = () => {
+const Settings = (props) => {
 
     return(
         <div className="settings-container">
-
+            <Colors handleColorSelect={props.handleColorSelect} colorState={props.colorState}/>
+            <Sizes handleSizeSelect={props.handleSizeSelect}/>
         </div>
     )
 }

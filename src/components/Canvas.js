@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Canvas = () => {
+const Canvas = (props) => {
     const [artState, setArtState] = useState([])
     const [colorState, setColorState] = useState('black')
     const [sizeState, setSizeState] = useState('4px')
@@ -14,8 +14,8 @@ const Canvas = () => {
             setArtState([
                 ...artState,
                 {
-                    color: colorState,
-                    size: sizeState,
+                    color: props.colorState,
+                    size: props.sizeState,
                     yCoord: e.pageY,
                     xCoord: e.pageX,
                 }
