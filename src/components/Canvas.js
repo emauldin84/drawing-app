@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 
 const Canvas = (props) => {
-    const [artState, setArtState] = useState([])
 
-    let art = artState.map((stroke, i) => {
+    let art = props.artState.map((stroke, i) => {
         return <div key={i} style={{position: 'absolute', borderRadius: '50%', backgroundColor: stroke.color, width: stroke.size, height: stroke.size, left: stroke.xCoord, top: stroke.yCoord}}></div>
     })
 
     const handleMouseMove = (e) => {
         if(e.nativeEvent.buttons === 1){
-            setArtState([
-                ...artState,
+            props.setArtState([
+                ...props.artState,
                 {
                     color: props.colorState,
                     size: props.sizeState,
@@ -21,8 +20,8 @@ const Canvas = (props) => {
         }
     }
     const handleClick = (e) => {
-            setArtState([
-                ...artState,
+            props.setArtState([
+                ...props.artState,
                 {
                     color: props.colorState,
                     size: props.sizeState,
