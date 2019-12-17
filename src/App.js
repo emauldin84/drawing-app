@@ -7,7 +7,7 @@ import Settings from './components/Settings'
 const App = () => {
 
   const [colorState, setColorState] = useState('#000000')
-  const [sizeState, setSizeState] = useState('4px')
+  const [sizeState, setSizeState] = useState('12px')
   const [artState, setArtState] = useState([])
 
 
