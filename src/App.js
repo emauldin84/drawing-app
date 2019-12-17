@@ -6,7 +6,7 @@ import Settings from './components/Settings'
 
 const App = () => {
 
-  const [colorState, setColorState] = useState('black')
+  const [colorState, setColorState] = useState('#000000')
   const [sizeState, setSizeState] = useState('4px')
 
   const handleColorSelect = (e) => {
@@ -14,7 +14,8 @@ const App = () => {
     setColorState(e.target.value)
   }
 
-  const handleSizeSelect = (size) => {
+  const handleSizeSelect = (e) => {
+    const size = e.currentTarget.dataset.size
     setSizeState(size)
   }
 
